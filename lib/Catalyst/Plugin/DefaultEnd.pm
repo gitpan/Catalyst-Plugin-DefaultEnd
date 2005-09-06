@@ -2,17 +2,17 @@ package Catalyst::Plugin::DefaultEnd;
 
 use base qw/Catalyst::Base/;
 
-our $VERSION='0.01';
+our $VERSION='0.02';
 
-=item NAME
+=head1 NAME
 
 Catalyst::Plugin::DefaultEnd - Sensible default end action.
 
-=item SYNOPSIS
+=head1 SYNOPSIS
 
     use Catalyst qw/-Debug DefaultEnd/;
 
-=item DESCRIPTION
+=head1 DESCRIPTION
 
 This action implements a sensible default end action, which will forward
 to the first available view, unless status is set to 3xx, or there is a
@@ -46,5 +46,17 @@ sub end : Private {
     $c->forward(ref $comp);
 }
 
+=back
+
+=head1 AUTHOR
+
+Marcus Ramberg <marcus@thefeed.no>
+
+=head1 LICENSE
+
+This library is free software . You can redistribute it and/or modify it under
+the same terms as perl itself.
+
+=cut
 
 1;
