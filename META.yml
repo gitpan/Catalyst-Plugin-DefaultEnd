@@ -1,6 +1,6 @@
 ---
 name: Catalyst-Plugin-DefaultEnd
-version: 0.02
+version: 0.03
 author:
   - Marcus Ramberg <marcus@thefeed.no>
 abstract: Sensible default end action.
@@ -10,5 +10,5 @@ requires:
 provides:
   Catalyst::Plugin::DefaultEnd:
     file: lib/Catalyst/Plugin/DefaultEnd.pm
-    version: 0.02
+    version: 0.03
 generated_by: Module::Build version 0.2607

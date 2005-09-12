@@ -2,7 +2,8 @@ package Catalyst::Plugin::DefaultEnd;
 
 use base qw/Catalyst::Base/;
 
-our $VERSION='0.02';
+use strict;
+our $VERSION='0.03';
 
 =head1 NAME
 

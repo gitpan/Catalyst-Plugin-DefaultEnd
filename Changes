@@ -1,5 +1,7 @@
 Revision history for Perl extension Catalyst::Plugin::DefaultEnd
 
+0.03  11-09-2005 10:21:00
+	- Added Makefile.PL and README to manifest :O
 0.02  06-09-2005 14:54:00
 	- Changed to Build.PL
 	- Added README
