@@ -1,5 +1,10 @@
 Revision history for Perl extension Catalyst::Plugin::DefaultEnd
 
+0.04  11-09-2005 16:32:00
+        - Do not forward to view if there are errors, and no template
+        - check body for definedness, not true/false.
+        - added live tests
+
 0.03  11-09-2005 10:21:00
 	- Added Makefile.PL and README to manifest :O
 0.02  06-09-2005 14:54:00

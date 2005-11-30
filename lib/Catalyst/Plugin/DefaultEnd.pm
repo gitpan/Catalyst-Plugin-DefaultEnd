@@ -3,7 +3,7 @@ package Catalyst::Plugin::DefaultEnd;
 use base qw/Catalyst::Base/;
 
 use strict;
-our $VERSION='0.03';
+our $VERSION = '0.04';
 
 =head1 NAME
 
@@ -36,15 +36,16 @@ class, normal inheritance applies.
 
 sub end : Private {
     my ( $self, $c ) = @_;
-    die "forced debug" if $c->debug && $c->req->params->{dump_info};
+    die "forced debug" if $c->debug             && $c->req->params->{dump_info};
+    return 1           if scalar @{ $c->error } && !$c->stash->{template};
     return 1 if $c->response->status =~ /^3\d\d$/;
-    return 1 if $c->response->body;                         
     unless ( $c->response->content_type ) {
-       $c->response->content_type('text/html; charset=utf-8');
+        $c->response->content_type('text/html; charset=utf-8');
     }
-    return $c->forward($c->config->{view}) if $c->config->{view};
-    my ($comp) = $c->comp('^'.ref($c).'::(V|View)::');
-    $c->forward(ref $comp);
+    return 1                                 if $c->response->body;
+    return $c->forward( $c->config->{view} ) if $c->config->{view};
+    my ($comp) = $c->comp( '^' . ref($c) . '::(V|View)::' );
+    $c->forward( ref $comp );
 }
 
 =back

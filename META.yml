@@ -1,14 +1,8 @@
----
+--- #YAML:1.0
 name: Catalyst-Plugin-DefaultEnd
-version: 0.03
+version: 0.04
 author:
   - Marcus Ramberg <marcus@thefeed.no>
 abstract: Sensible default end action.
 license: perl
-requires:
-  Catalyst: 5.2
-provides:
-  Catalyst::Plugin::DefaultEnd:
-    file: lib/Catalyst/Plugin/DefaultEnd.pm
-    version: 0.03
-generated_by: Module::Build version 0.2607
+generated_by: Module::Build version 0.2611, without YAML.pm
