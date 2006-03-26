@@ -3,7 +3,7 @@ package Catalyst::Plugin::DefaultEnd;
 use base qw/Catalyst::Base/;
 
 use strict;
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 =head1 NAME
 
@@ -36,9 +36,10 @@ class, normal inheritance applies.
 
 sub end : Private {
     my ( $self, $c ) = @_;
-    die "forced debug" if $c->debug             && $c->req->params->{dump_info};
-    return 1           if scalar @{ $c->error } && !$c->stash->{template};
-    return 1 if $c->response->status =~ /^3\d\d$/;
+    die "forced debug" if $c->debug && $c->req->params->{dump_info};
+    return 1 if $c->req->method eq 'HEAD';
+    return 1 if scalar @{ $c->error } && !$c->stash->{template};
+    return 1 if $c->response->status =~ /^(204|3\d\d)$/;
     unless ( $c->response->content_type ) {
         $c->response->content_type('text/html; charset=utf-8');
     }

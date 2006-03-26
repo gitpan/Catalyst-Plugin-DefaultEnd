@@ -1,5 +1,9 @@
 Revision history for Perl extension Catalyst::Plugin::DefaultEnd
 
+0.05  27-03-2006 00:02:00
+	- Don't forward for HEAD requests
+	- Don't forward for 204s.
+	
 0.04  11-09-2005 16:32:00
         - Do not forward to view if there are errors, and no template
         - check body for definedness, not true/false.
