@@ -3,7 +3,7 @@ package Catalyst::Plugin::DefaultEnd;
 use base qw/Catalyst::Base/;
 
 use strict;
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 
 =head1 NAME
 
@@ -39,7 +39,7 @@ sub end : Private {
     die "forced debug" if $c->debug && $c->req->params->{dump_info};
     return 1 if $c->req->method eq 'HEAD';
     return 1 if scalar @{ $c->error } && !$c->stash->{template};
-    return 1 if $c->response->status =~ /^(204|3\d\d)$/;
+    return 1 if $c->response->status =~ /^(?:401|204|3\d\d)$/;
     unless ( $c->response->content_type ) {
         $c->response->content_type('text/html; charset=utf-8');
     }
