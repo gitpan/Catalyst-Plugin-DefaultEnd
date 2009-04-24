@@ -1,17 +1,24 @@
 package Catalyst::Plugin::DefaultEnd;
 
-use base qw/Catalyst::Base/;
+use base qw/Catalyst::Controller/;
 
 use strict;
-our $VERSION = '0.06';
+our $VERSION = '0.07';
 
 =head1 NAME
 
-Catalyst::Plugin::DefaultEnd - Sensible default end action.
+Catalyst::Plugin::DefaultEnd - DEPRECATED Sensible default end action.
 
 =head1 SYNOPSIS
 
     use Catalyst qw/-Debug DefaultEnd/;
+
+=head1 WARNING
+
+This module is deprecated, and B<should not be used in new applications>.
+
+Please use L<Catalyst::Action::RenderView> instead. It is preserved here for
+backwards compatibility reasons.
 
 =head1 DESCRIPTION
 

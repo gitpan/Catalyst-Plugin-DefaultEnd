@@ -1,8 +1,14 @@
 NAME
-    Catalyst::Plugin::DefaultEnd - Sensible default end action.
+    Catalyst::Plugin::DefaultEnd - DEPRECATED Sensible default end action.
 
 SYNOPSIS
         use Catalyst qw/-Debug DefaultEnd/;
+
+WARNING
+    This module is deprecated, and should not be used in new applications.
+
+    Please use Catalyst::Action::RenderView instead. It is preserved here
+    for backwards compatibility reasons.
 
 DESCRIPTION
     This action implements a sensible default end action, which will forward
