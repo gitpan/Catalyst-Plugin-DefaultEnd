@@ -26,6 +26,10 @@ METHODS
 AUTHOR
     Marcus Ramberg <marcus@thefeed.no>
 
+COPYRIGHT
+    Copyright (c) 2005 - 2009 the Catalyst::Plugin::DefaultEnd "AUTHOR" as
+    listed above.
+
 LICENSE
     This library is free software . You can redistribute it and/or modify it
     under the same terms as perl itself.

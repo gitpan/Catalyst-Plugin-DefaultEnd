@@ -1,5 +1,8 @@
 Revision history for Perl extension Catalyst::Plugin::DefaultEnd
 
+0.08  18-10-2009 19:00:00 BST
+    - Fixup copyright info so deprecation notice gets into downstream packages
+
 0.07  24-04-2009 17:54:59
     - Change to not use deprecated Catalyst::Base
     - Mark this code as deprecated, as it has been for aaaages.

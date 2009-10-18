@@ -3,7 +3,7 @@ package Catalyst::Plugin::DefaultEnd;
 use base qw/Catalyst::Controller/;
 
 use strict;
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 
 =head1 NAME
 
@@ -61,6 +61,12 @@ sub end : Private {
 =head1 AUTHOR
 
 Marcus Ramberg <marcus@thefeed.no>
+
+=head1 COPYRIGHT
+
+Copyright (c) 2005 - 2009
+the Catalyst::Plugin::DefaultEnd L</AUTHOR>
+as listed above.
 
 =head1 LICENSE
 
